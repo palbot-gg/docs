@@ -307,18 +307,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#1-enable-rcon" class="md-nav__link">
+  <a href="#1-enable-rest-api" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Enable RCON
+      1. Enable REST API
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-enable-rest-api-optional" class="md-nav__link">
+  <a href="#2-enable-rcon-optional" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Enable REST API (Optional)
+      2. Enable RCON (Optional)
     </span>
   </a>
   
@@ -389,10 +389,22 @@
 
 <h1 id="palbot-setup-guide">Palbot Setup Guide</h1>
 <h2 id="what-is-palbot">What is Palbot?</h2>
-<p>Palbot connects to your Palworld dedicated server using RCON to execute remote commands and gather information. It can also utilize the REST API if enabled.</p>
+<p>Palbot connects to your Palworld dedicated server using RESTAPI to execute remote commands and gather information. It can also utilize RCON if enabled.</p>
 <hr />
-<h2 id="1-enable-rcon">1. Enable RCON</h2>
-<p>To allow Palbot to communicate with your server, RCON must be enabled.</p>
+<h2 id="1-enable-rest-api">1. Enable REST API</h2>
+<p>To allow Palbot to communicate with your server, RESTAPI must be enabled.</p>
+<ol>
+<li>In the same <code>PalWorldSettings.ini</code> file, ensure this section is enabled:</li>
+</ol>
+<pre><code>AdminPassword=&quot;YourPassword&quot;,RESTAPIEnabled=True,RESTAPIPort=8212
+</code></pre>
+<ul>
+<li><strong>RESTAPIEnabled</strong>: Must be set to <code>True</code>.</li>
+<li><strong>RESTAPIPort</strong>: Default is <code>8212</code>.</li>
+</ul>
+<hr />
+<h2 id="2-enable-rcon-optional">2. Enable RCON (Optional)</h2>
+<p>RCON Port is required for the <code>/palcon</code> command.</p>
 <ol>
 <li>Open your <code>PalWorldSettings.ini</code> file.</li>
 <li>Make sure the following settings are present and configured:</li>
@@ -405,32 +417,19 @@
 <li><strong>RCONPort</strong>: Set the port; default is usually <code>25575</code>.</li>
 </ul>
 <hr />
-<h2 id="2-enable-rest-api-optional">2. Enable REST API (Optional)</h2>
-<p>The REST API is required for commands like <code>/serverinfo</code> and <code>/livemap</code>.</p>
-<ol>
-<li>In the same <code>PalWorldSettings.ini</code> file, ensure this section is enabled:</li>
-</ol>
-<pre><code>AdminPassword=&quot;YourPassword&quot;,RESTAPIEnabled=True,RESTAPIPort=8212
-</code></pre>
-<ul>
-<li><strong>RESTAPIEnabled</strong>: Must be set to <code>True</code>.</li>
-<li><strong>RESTAPIPort</strong>: Default is <code>8212</code>.</li>
-</ul>
-<hr />
 <h2 id="3-add-your-server-to-palbot">3. Add Your Server to Palbot</h2>
 <p>Use the <code>/addserver</code> command in Discord and fill out the following fields:</p>
 <ul>
 <li><strong>Server Name</strong>: A unique name for your server (can be anything).</li>
 <li><strong>Host</strong>: The address used to connect (example: <code>127.0.0.1</code>).</li>
-<li><strong>RCON Port</strong>: The port you configured for RCON.</li>
-<li><strong>Password</strong>: The RCON admin password.</li>
 <li><strong>REST API Port</strong>: The port used for the REST API (if enabled).</li>
+<li><strong>RCON Port</strong>: The port you configured for RCON. (optional)</li>
+<li><strong>Password</strong>: The RCON admin password.</li>
 </ul>
 <hr />
 <h2 id="4-test-your-setup">4. Test Your Setup</h2>
 <ul>
-<li>Use <code>/rcon info</code> to test RCON connectivity.</li>
-<li>Use <code>/serverinfo</code> to test REST API functionality.</li>
+<li>Use <code>/serverinfo</code> to test REST API connectivity.</li>
 </ul>
 <p>If both return results, your setup is complete!</p>
 
