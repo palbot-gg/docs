@@ -399,6 +399,7 @@
 <pre><code>AdminPassword=&quot;YourPassword&quot;,RESTAPIEnabled=True,RESTAPIPort=8212
 </code></pre>
 <ul>
+<li><strong>AdminPassword</strong>: Set a strong admin password.</li>
 <li><strong>RESTAPIEnabled</strong>: Must be set to <code>True</code>.</li>
 <li><strong>RESTAPIPort</strong>: Default is <code>8212</code>.</li>
 </ul>
@@ -412,7 +413,6 @@
 <pre><code>AdminPassword=&quot;YourPassword&quot;,RCONEnabled=True,RCONPort=25575
 </code></pre>
 <ul>
-<li><strong>AdminPassword</strong>: Set a strong admin password.</li>
 <li><strong>RCONEnabled</strong>: Must be set to <code>True</code>.</li>
 <li><strong>RCONPort</strong>: Set the port; default is usually <code>25575</code>.</li>
 </ul>
@@ -430,6 +430,7 @@
 <h2 id="4-test-your-setup">4. Test Your Setup</h2>
 <ul>
 <li>Use <code>/serverinfo</code> to test REST API connectivity.</li>
+<li>Use <code>/palcon command:info</code> to test RCON connectivity.</li>
 </ul>
 <p>If both return results, your setup is complete!</p>
 
