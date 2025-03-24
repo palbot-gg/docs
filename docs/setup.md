@@ -12,6 +12,7 @@ To allow Palbot to communicate with your server, RESTAPI must be enabled.
 ```
 AdminPassword="YourPassword",RESTAPIEnabled=True,RESTAPIPort=8212
 ```
+- **AdminPassword**: Set a strong admin password.
 - **RESTAPIEnabled**: Must be set to `True`.
 - **RESTAPIPort**: Default is `8212`.
 
@@ -25,7 +26,6 @@ RCON Port is required for the `/palcon` command.
 ```
 AdminPassword="YourPassword",RCONEnabled=True,RCONPort=25575
 ```
-- **AdminPassword**: Set a strong admin password.
 - **RCONEnabled**: Must be set to `True`.
 - **RCONPort**: Set the port; default is usually `25575`.
 
@@ -46,5 +46,6 @@ Use the `/addserver` command in Discord and fill out the following fields:
 ## 4. Test Your Setup
 
 - Use `/serverinfo` to test REST API connectivity.
+- Use `/palcon command:info` to test RCON connectivity.
 
 If both return results, your setup is complete!

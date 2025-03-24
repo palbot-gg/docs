@@ -23,6 +23,9 @@
 | `/locate` | Shows the spawn locations of Pals. | `User` |
 | `/passives` | Look up different passive skills in the database. | `User` |
 | `/buildings` | Look up buildings available in Palworld. | `User` |
+| `/catch` | Catch a random Pal! | `User` |
+| `/battle` | Engage your Pal in a battle to earn experience! | `User` |
+| `/balance` | Check your current points balance | `User` |
 
 ## Palcon Commands
 | Command | Description | Permission |
