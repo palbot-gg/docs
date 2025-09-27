@@ -20,6 +20,7 @@ nav:
   - Home: index.md
   - Setup: setup.md
   - Commands: commands.md
+  - Kits: kits.md
 extra:
   social:
     - icon: fontawesome/brands/github
