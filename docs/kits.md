@@ -8,15 +8,15 @@ Palbot supports a **Kits** system that lets you define bundles of commands you c
 
 | Command | Description |
 |---------|-------------|
-| `/managekit <optional existing kit>` | Create a new kit or modify an existing one. |
-| `/deletekit <kit_name>` | Delete an existing kit. |
-| `/givekit <userid> <kit_name> <server>` | Give a kit to a player on your server. |
+| `/kits manage <optional existing kit>` | Create a new kit or modify an existing one. |
+| `/kits delete <kit_name>` | Delete an existing kit. |
+| `/kits give <userid> <kit_name> <server>` | Give a kit to a player on your server. |
 
 ---
 
 ## Kits Modal
 
-When you run `/managekit`, you’ll be presented with a modal to configure your kit. The fields are:
+When you run `/kits manage`, you’ll be presented with a modal to configure your kit. The fields are:
 
 - **Kit Name**  
   The identifier for your kit. This name will show up in autocomplete when giving it to a player.
@@ -52,4 +52,4 @@ Grant 10,000 XP, 5 berries, and a level 10 Anubis:
 - Keep kit names short and descriptive.
 - Use the description field to explain what the kit contains.
 - Test your kits to make sure they're working correctly.
-- Combine related items into one `giveitems` command when possible for less RCON requests to server.
+- Combine related items into one `/kits give` command when possible for less RCON requests to server.
