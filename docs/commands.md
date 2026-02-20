@@ -1,5 +1,6 @@
 # Palbot Commands
-
+!!! info "Dashboard now available"
+    Check out our new [dashboard](https://dashboard.palbox.xyz)!
 ## Getting Started
 > Commands for adding your server to the bot.
 
@@ -26,6 +27,25 @@
 | `/catch` | Catch a random Pal! | `User` |
 | `/battle` | Engage your Pal in a battle to earn experience! | `User` |
 | `/balance` | Check your current points balance | `User` |
+
+## Economy Commands
+| Command | Description | Permission |
+|---------|-------------|:-:|
+| `/checkpoints` | Check a user's points balance | `Server Admin` |
+| `/givepoints` | Give points to a user | `Server Admin` |
+| `/removepoints` | Remove points from a user | `Server Admin` |
+| `/forcelink` | Force link a Discord user to a game account | `Server Admin` |
+| `/daily` | Claim your daily points reward | `User` |
+| `/work` | Work to earn points | `User` |
+
+## Pal Game Commands
+| Command | Description | Permission |
+|---------|-------------|:-:|
+| `/catch` | Catch a random Pal | `User` |
+| `/battle` | Battle with your Pal to earn experience | `User` |
+| `/palbox` | View and manage your Pal collection | `User` |
+| `/party` | Manage your active Pal party | `User` |
+| `/adventure` | Send your Pals on an adventure | `User` |
 
 ## Palcon Commands
 | Command | Description | Permission |

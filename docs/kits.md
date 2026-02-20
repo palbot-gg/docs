@@ -1,6 +1,12 @@
 # Kits
 
+!!! info "Dashboard Kit Builder Available"
+    You can now create and manage kits directly from the [dashboard](https://dashboard.palbox.xyz) using our visual kit builder!
+
 Palbot supports a **Kits** system that lets you define bundles of commands you can quickly give to players. This is useful for server rewards, events, or quick setup of player inventories.
+
+!!! warning "Requirements"
+    The kits system requires the **PalDefender** mod to be installed on your server. You can find item and Pal IDs on our [PalDeck](https://paldeck.cc).
 
 ---
 

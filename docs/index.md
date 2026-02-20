@@ -1,4 +1,6 @@
 # Welcome to Palbot Documentation
+!!! info "Dashboard now available"
+    Check out our new [dashboard](https://dashboard.palbox.xyz)!
 Palbot is your all-in-one companion for managing and accessing Palworld data with ease.
 Whether you're a server admin or player, you'll find everything you need here.
 

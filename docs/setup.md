@@ -1,4 +1,6 @@
 # Palbot Setup Guide
+!!! info "Dashboard now available"
+    Check out our new [dashboard](https://dashboard.palbox.xyz)!
 
 ## What is Palbot?
 Palbot connects to your Palworld dedicated server using RESTAPI to execute remote commands and gather information. It can also utilize RCON if enabled.
@@ -19,7 +21,7 @@ AdminPassword="YourPassword",RESTAPIEnabled=True,RESTAPIPort=8212
 ---
 
 ## 2. Enable RCON (Optional)
-RCON Port is required for the `/palcon` command.
+RCON Port is required for the `/palcon` command. RCON is also required for `kits` and `give` commands.
 
 1. Open your `PalWorldSettings.ini` file.
 2. Make sure the following settings are present and configured:
