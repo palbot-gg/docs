@@ -26,6 +26,9 @@
     
       <link rel="stylesheet" href="../assets/stylesheets/main.2a3383ac.min.css">
       
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
       
 
 
@@ -53,7 +56,14 @@
   </head>
   
   
-    <body dir="ltr">
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -104,6 +114,32 @@
         </div>
       </div>
     </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
     
     
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
@@ -450,34 +486,34 @@
 
 
 <h1 id="palbot-setup-guide">Palbot Setup Guide</h1>
+<div class="admonition info">
+<p class="admonition-title">Dashboard now available</p>
+<p>Check out our new <a href="https://dashboard.palbox.xyz">dashboard</a>!</p>
+</div>
 <h2 id="what-is-palbot">What is Palbot?</h2>
 <p>Palbot connects to your Palworld dedicated server using RESTAPI to execute remote commands and gather information. It can also utilize RCON if enabled.</p>
 <hr />
 <h2 id="1-enable-rest-api">1. Enable REST API</h2>
 <p>To allow Palbot to communicate with your server, RESTAPI must be enabled.</p>
 <ol>
-<li>In the same <code>PalWorldSettings.ini</code> file, ensure this section is enabled:</li>
-</ol>
-<pre><code>AdminPassword=&quot;YourPassword&quot;,RESTAPIEnabled=True,RESTAPIPort=8212
-</code></pre>
-<ul>
+<li>In the same <code>PalWorldSettings.ini</code> file, ensure this section is enabled:
+<div class="highlight"><pre><span></span><code>AdminPassword=&quot;YourPassword&quot;,RESTAPIEnabled=True,RESTAPIPort=8212
+</code></pre></div></li>
 <li><strong>AdminPassword</strong>: Set a strong admin password.</li>
 <li><strong>RESTAPIEnabled</strong>: Must be set to <code>True</code>.</li>
 <li><strong>RESTAPIPort</strong>: Default is <code>8212</code>.</li>
-</ul>
+</ol>
 <hr />
 <h2 id="2-enable-rcon-optional">2. Enable RCON (Optional)</h2>
 <p>RCON Port is required for the <code>/palcon</code> command. RCON is also required for <code>kits</code> and <code>give</code> commands.</p>
 <ol>
 <li>Open your <code>PalWorldSettings.ini</code> file.</li>
-<li>Make sure the following settings are present and configured:</li>
-</ol>
-<pre><code>AdminPassword=&quot;YourPassword&quot;,RCONEnabled=True,RCONPort=25575
-</code></pre>
-<ul>
+<li>Make sure the following settings are present and configured:
+<div class="highlight"><pre><span></span><code>AdminPassword=&quot;YourPassword&quot;,RCONEnabled=True,RCONPort=25575
+</code></pre></div></li>
 <li><strong>RCONEnabled</strong>: Must be set to <code>True</code>.</li>
 <li><strong>RCONPort</strong>: Set the port; default is usually <code>25575</code>.</li>
-</ul>
+</ol>
 <hr />
 <h2 id="3-add-your-server-to-palbot">3. Add Your Server to Palbot</h2>
 <p>Use the <code>/addserver</code> command in Discord and fill out the following fields:</p>
